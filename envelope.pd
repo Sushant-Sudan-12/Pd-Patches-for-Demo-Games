@@ -1,0 +1,45 @@
+#N canvas 89 251 626 449 10;
+#X obj 150 60 noise~;
+#X obj 150 100 *~ 0.5;
+#X obj 150 160 *~;
+#X obj 240 10 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 240 40 1 1000;
+#X obj 320 40 delay 1000;
+#X obj 320 70 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 320 100 0.5 1500;
+#X obj 420 90 delay 3000;
+#X obj 420 120 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 420 143 0 1000;
+#X obj 150 200 *~ 0.25;
+#X obj 150 250 dac~;
+#X obj 240 137 line~;
+#X obj 518 220 snapshot~;
+#X obj 518 190 metro 20;
+#X floatatom 518 250 5 0 0 0 - - -, f 5;
+#X obj 520 160 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 520 130 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 11 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 13 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 13 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 13 0 2 1;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 17 0 15 0;
+#X connect 18 0 17 0;
