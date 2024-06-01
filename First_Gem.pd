@@ -1,4 +1,4 @@
-#N canvas 100 220 450 301 10;
+#N canvas 100 220 450 302 10;
 #X obj 170 100 gemwin;
 #X msg 130 30 create;
 #X msg 220 30 destroy;
