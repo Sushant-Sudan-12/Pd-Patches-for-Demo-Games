@@ -1,4 +1,4 @@
-#N canvas 519 176 602 460 10;
+#N canvas 77 217 604 461 10;
 #X msg 70 40 create \, 1;
 #X obj 70 110 gemwin;
 #X msg 90 60 0 \, destroy;
@@ -15,6 +15,8 @@
 #X floatatom 200 340 5 0 0 0 - - -, f 5;
 #X floatatom 240 340 5 0 0 0 - - -, f 5;
 #X floatatom 280 340 5 0 0 0 - - -, f 5;
+#X obj 100 340 loadbang;
+#X msg 100 370 draw line;
 #X connect 0 0 1 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
@@ -31,3 +33,5 @@
 #X connect 13 0 11 1;
 #X connect 14 0 11 2;
 #X connect 15 0 11 3;
+#X connect 16 0 17 0;
+#X connect 17 0 8 0;
