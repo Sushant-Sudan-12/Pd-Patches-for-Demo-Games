@@ -1,6 +1,9 @@
-#N canvas 100 220 450 302 10;
+#N canvas 804 213 450 303 10;
 #X obj 170 100 gemwin;
-#X msg 130 30 create;
 #X msg 220 30 destroy;
+#X obj 140 190 gemhead;
+#X obj 140 240 rectangle;
+#X msg 130 30 create \, 1;
 #X connect 1 0 0 0;
-#X connect 2 0 0 0;
+#X connect 2 0 3 0;
+#X connect 4 0 0 0;
