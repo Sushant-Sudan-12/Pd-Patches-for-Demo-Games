@@ -1,4 +1,4 @@
-#N canvas 813 331 453 343 10;
+#N canvas 1047 412 452 342 10;
 #X obj 370 70 gemwin;
 #X msg 390 30 destroy;
 #X msg 300 30 create \, 1;
@@ -14,6 +14,9 @@
 #X obj 243 31 + 1;
 #X msg 173 -9 1;
 #X msg 173 61 float \$1;
+#X obj 714 49 gemwin;
+#X msg 734 9 destroy;
+#X msg 644 9 create \, 1;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 4 0;
@@ -27,3 +30,5 @@
 #X connect 11 0 10 0;
 #X connect 12 0 11 0;
 #X connect 13 0 8 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;

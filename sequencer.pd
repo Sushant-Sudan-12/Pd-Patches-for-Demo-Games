@@ -1,4 +1,4 @@
-#N canvas 662 16 736 750 10;
+#N canvas 661 16 737 750 10;
 #X obj 180 140 metro;
 #X obj 180 165 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -99,14 +99,14 @@
 #X obj 530 563 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 570 510 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 620 510 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 620 540 spigot;
 #X obj 620 563 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 660 510 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 120 480 receive Two;
 #X obj 200 480 receive Three;
 #X obj 290 480 receive Four;
