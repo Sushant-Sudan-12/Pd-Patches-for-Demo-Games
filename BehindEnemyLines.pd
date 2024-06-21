@@ -1,0 +1,19 @@
+#N canvas 48 28 578 426 10;
+#X obj 0 60 gemwin;
+#X msg 10 30 destroy, f 8;
+#X obj 90 80 gemhead;
+#X obj 90 130 colorRGB 1 0 0;
+#X msg 0 10 dimen 640 600 \, create \, 1;
+#X obj 90 160 circle 0.3;
+#X obj 310 60 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 310 120 s xpos;
+#X obj 290 189 receive xpos;
+#X obj 290 220 print;
+#X obj 310 90 random;
+#X obj 90 110 translateXYZ 3 0 0;
+#X connect 1 0 0 0;
+#X connect 2 0 11 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 11 0 3 0;
