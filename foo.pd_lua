@@ -1,4 +1,12 @@
 local foo = pd.Class:new():register("foo")
+foo.init = 0
+
+function foo:postinitialize()
+   if foo.init == 0 then
+      pd.post("Welcome to foo! Copyright (c) by Foo software.")
+   end
+   foo.init = foo.init + 1
+end
 
 function foo:initialize(sel, atoms)
    self.inlets = 1
@@ -25,4 +33,12 @@ end
 function foo:in_1_bang()
    self:outlet(1, "float", {self.counter})
    self.counter = self.counter + self.step
+end
+
+
+function foo:finalize()
+   foo.init = foo.init - 1
+   if foo.init == 0 then
+      pd.post("Thanks for using foo!")
+   end
 end
