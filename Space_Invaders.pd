@@ -1,0 +1,6 @@
+#N canvas 1030 268 451 301 10;
+#X obj 10 80 gemwin;
+#X msg 30 50 destroy;
+#X msg 10 20 dimen 600 750 \, create \, 1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
