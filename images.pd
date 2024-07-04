@@ -1,4 +1,4 @@
-#N canvas 1044 32 450 306 10;
+#N canvas 759 16 451 307 10;
 #X obj 130 30 gemhead;
 #X obj 130 140 pix_image;
 #X obj 130 180 pix_draw;
@@ -9,6 +9,7 @@
 #X obj 160 60 loadbang;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
+#X connect 3 0 1 0;
 #X connect 5 0 4 0;
 #X connect 6 0 4 0;
 #X connect 7 0 3 0;
