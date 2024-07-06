@@ -1,4 +1,4 @@
-#N canvas 1029 350 465 344 10;
+#N canvas 980 300 467 347 10;
 #X obj 20 60 gemwin;
 #X msg 40 40 destroy;
 #X msg 20 20 dimen 600 600 \, create \, 1;
@@ -479,7 +479,7 @@
 #X connect 54 0 37 0;
 #X connect 55 0 32 0;
 #X restore 20 180 pd Green_Tiles;
-#N canvas 560 24 886 710 beat-sequencer 0;
+#N canvas 362 336 888 737 beat-sequencer 1;
 #X obj 279 -911 metro;
 #X obj 279 -886 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -528,8 +528,6 @@
 #X obj 629 -671 sel 8;
 #X obj 629 -623 s Eight;
 #X floatatom 309 -961 5 0 0 0 - - -, f 5;
-#X obj 279 -951 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
 #X obj 139 -571 receive One;
 #X obj 139 -541 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -597,8 +595,12 @@
 #X obj 239 -401 send red;
 #X obj 589 -421 send blue;
 #X obj 170 -830 send all;
-#X obj 170 -990 receive start_beats;
 #X msg 309 -986 2000;
+#X obj 200 -1000 receive start_beats;
+#X obj 230 -970 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 260 -940 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -607,10 +609,10 @@
 #X connect 4 0 2 1;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
-#X connect 6 0 81 0;
+#X connect 6 0 80 0;
 #X connect 7 0 2 0;
 #X connect 8 0 6 0;
-#X connect 9 0 83 0;
+#X connect 9 0 81 0;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
@@ -638,52 +640,53 @@
 #X connect 33 0 21 0;
 #X connect 35 0 22 0;
 #X connect 37 0 0 1;
-#X connect 38 0 0 0;
-#X connect 38 0 5 0;
+#X connect 38 0 39 0;
 #X connect 39 0 40 0;
+#X connect 39 0 78 0;
 #X connect 40 0 41 0;
-#X connect 40 0 79 0;
-#X connect 41 0 42 0;
-#X connect 43 0 41 1;
+#X connect 42 0 40 1;
+#X connect 43 0 44 0;
+#X connect 43 0 78 0;
 #X connect 44 0 45 0;
-#X connect 44 0 79 0;
-#X connect 45 0 46 0;
-#X connect 47 0 45 1;
+#X connect 46 0 44 1;
+#X connect 47 0 48 0;
+#X connect 47 0 78 0;
 #X connect 48 0 49 0;
-#X connect 48 0 79 0;
-#X connect 49 0 50 0;
-#X connect 51 0 49 1;
+#X connect 50 0 48 1;
+#X connect 51 0 52 0;
+#X connect 51 0 78 0;
 #X connect 52 0 53 0;
-#X connect 52 0 79 0;
-#X connect 53 0 54 0;
-#X connect 55 0 53 1;
+#X connect 54 0 52 1;
+#X connect 55 0 56 0;
+#X connect 55 0 79 0;
 #X connect 56 0 57 0;
-#X connect 56 0 80 0;
-#X connect 57 0 58 0;
-#X connect 59 0 57 1;
+#X connect 58 0 56 1;
+#X connect 59 0 60 0;
+#X connect 59 0 79 0;
 #X connect 60 0 61 0;
-#X connect 60 0 80 0;
-#X connect 61 0 62 0;
-#X connect 63 0 61 1;
+#X connect 62 0 60 1;
+#X connect 63 0 64 0;
+#X connect 63 0 79 0;
 #X connect 64 0 65 0;
-#X connect 64 0 80 0;
-#X connect 65 0 66 0;
-#X connect 67 0 65 1;
+#X connect 66 0 64 1;
+#X connect 67 0 68 0;
+#X connect 67 0 79 0;
 #X connect 68 0 69 0;
-#X connect 68 0 80 0;
-#X connect 69 0 70 0;
-#X connect 71 0 69 1;
-#X connect 72 0 44 0;
-#X connect 73 0 48 0;
-#X connect 74 0 52 0;
-#X connect 75 0 56 0;
-#X connect 76 0 60 0;
-#X connect 77 0 64 0;
-#X connect 78 0 68 0;
-#X connect 82 0 38 0;
-#X connect 83 0 37 0;
+#X connect 70 0 68 1;
+#X connect 71 0 43 0;
+#X connect 72 0 47 0;
+#X connect 73 0 51 0;
+#X connect 74 0 55 0;
+#X connect 75 0 59 0;
+#X connect 76 0 63 0;
+#X connect 77 0 67 0;
+#X connect 81 0 37 0;
+#X connect 82 0 83 0;
+#X connect 83 0 84 0;
+#X connect 84 0 5 0;
+#X connect 84 0 0 0;
 #X restore 20 110 pd beat-sequencer;
-#N canvas 884 1 466 380 score 0;
+#N canvas 772 77 466 381 score 0;
 #X obj 160 40 gemhead;
 #X obj 260 240 f;
 #X obj 320 90 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -767,7 +770,7 @@
 #X connect 33 0 34 0;
 #X connect 34 0 3 0;
 #X restore 20 90 pd score;
-#N canvas 63 20 871 747 SkyBlue_Tiles 1;
+#N canvas 62 20 872 748 SkyBlue_Tiles 0;
 #X obj 162 72 hsl 87 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 2150 1;
 #X obj 162 92 hsl 88 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
@@ -1030,7 +1033,7 @@
 #X connect 110 0 51 2;
 #X connect 110 0 40 0;
 #X restore 20 160 pd SkyBlue_Tiles;
-#N canvas 1012 44 454 534 set_reference 0;
+#N canvas 679 79 455 535 set_reference 0;
 #X obj 186 336 pack 0 0;
 #X floatatom 106 336 7 0 0 0 - - -, f 7;
 #X floatatom 296 336 6 0 0 0 - - -, f 6;
@@ -1051,6 +1054,7 @@
 #X obj 170 290 send new_point;
 #X obj 266 286 -;
 #X obj 180 60 receive spawn;
+#X obj 310 80 receive reset;
 #X connect 0 0 9 0;
 #X connect 3 0 4 0;
 #X connect 3 0 7 0;
@@ -1077,7 +1081,7 @@
 #X floatatom 70 280 5 0 0 0 - - -, f 5;
 #X msg 70 260 0.28;
 #X obj 90 210 loadbang;
-#N canvas 740 92 678 562 Player 1;
+#N canvas 106 104 679 588 Player 1;
 #X obj 228 449 outlet;
 #X obj 220 60 key 1;
 #X obj 240 170 f;
@@ -1169,7 +1173,7 @@
 #X connect 36 0 5 0;
 #X connect 37 0 12 0;
 #X restore 20 210 pd Player;
-#N canvas 184 129 746 601 collision 0;
+#N canvas 184 128 746 602 collision 0;
 #X obj 240 50 inlet radius;
 #X obj 130 30 inlet reference;
 #X obj 182 220 gemhead;
@@ -1243,7 +1247,7 @@
 #X connect 19 0 3 2;
 #X connect 20 0 6 1;
 #X restore 20 300 pd collision;
-#N canvas 286 194 447 440 Game_overScreen 0;
+#N canvas 1077 8 452 470 Game_overScreen 0;
 #X msg 30 130 set 56;
 #X obj 30 155 gemhead;
 #X obj 30 180 colorRGB 1 1 1;
@@ -1253,8 +1257,6 @@
 #X obj 140 205 text2d GAME OVER;
 #X floatatom 240 180 5 0 0 0 - - -, f 5;
 #X obj 30 200 square 4;
-#X obj 30 110 loadbang;
-#X obj 140 110 loadbang;
 #X obj 90 80 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
 0 1;
 #X obj 120 80 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -1273,26 +1275,26 @@
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X connect 7 0 6 1;
+#X connect 9 0 1 0;
+#X connect 9 0 4 0;
+#X connect 9 0 10 0;
+#X connect 9 0 12 1;
 #X connect 9 0 0 0;
-#X connect 10 0 3 0;
-#X connect 11 0 1 0;
-#X connect 11 0 4 0;
-#X connect 11 0 12 0;
-#X connect 11 0 14 1;
-#X connect 12 0 13 0;
-#X connect 13 0 15 1;
-#X connect 14 0 11 0;
-#X connect 15 0 11 0;
-#X connect 16 0 15 0;
-#X connect 17 0 14 0;
-#X connect 18 0 13 0;
+#X connect 9 0 3 0;
+#X connect 10 0 11 0;
+#X connect 11 0 13 1;
+#X connect 12 0 9 0;
+#X connect 13 0 9 0;
+#X connect 14 0 13 0;
+#X connect 15 0 12 0;
+#X connect 16 0 11 0;
 #X restore 320 70 pd Game_overScreen;
 #X obj 410 10 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 360 40 send game_over;
-#N canvas 817 56 599 700 Collision 1;
+#N canvas 816 56 602 702 Collision 0;
 #X obj 40 80 inlet player_pos;
-#N canvas 688 376 330 305 collide 0;
+#N canvas 688 376 330 306 collide 0;
 #X obj 20 109 list-map2;
 #X obj 115 108 -;
 #X obj 115 133 abs;
@@ -1304,7 +1306,6 @@
 #X obj 20 10 inlet test;
 #X obj 20 222 outlet;
 #X obj 163 53 t b a;
-#X obj 120 240 print;
 #X connect 0 0 6 0;
 #X connect 0 1 1 0;
 #X connect 1 0 2 0;
@@ -1319,7 +1320,7 @@
 #X connect 10 0 0 0;
 #X connect 10 1 3 1;
 #X restore 120 390 pd collide;
-#N canvas 688 376 343 278 collide 0;
+#N canvas 688 376 346 278 collide 0;
 #X obj 20 109 list-map2;
 #X obj 115 108 -;
 #X obj 115 133 abs;
@@ -1331,7 +1332,6 @@
 #X obj 20 10 inlet test;
 #X obj 20 222 outlet;
 #X obj 163 53 t b a;
-#X obj 120 240 print;
 #X connect 0 0 6 0;
 #X connect 0 1 1 0;
 #X connect 1 0 2 0;
@@ -1346,7 +1346,7 @@
 #X connect 10 0 0 0;
 #X connect 10 1 3 1;
 #X restore 200 390 pd collide;
-#N canvas 688 376 453 338 collide 0;
+#N canvas 688 376 454 338 collide 0;
 #X obj 20 109 list-map2;
 #X obj 115 108 -;
 #X obj 115 133 abs;
@@ -1358,7 +1358,6 @@
 #X obj 20 10 inlet test;
 #X obj 20 222 outlet;
 #X obj 163 53 t b a;
-#X obj 120 240 print;
 #X connect 0 0 6 0;
 #X connect 0 1 1 0;
 #X connect 1 0 2 0;
@@ -1373,7 +1372,7 @@
 #X connect 10 0 0 0;
 #X connect 10 1 3 1;
 #X restore 280 390 pd collide;
-#N canvas 688 376 462 313 collide 0;
+#N canvas 688 376 462 314 collide 0;
 #X obj 20 109 list-map2;
 #X obj 115 108 -;
 #X obj 115 133 abs;
@@ -1385,7 +1384,6 @@
 #X obj 20 10 inlet test;
 #X obj 20 222 outlet;
 #X obj 163 53 t b a;
-#X obj 120 240 print;
 #X connect 0 0 6 0;
 #X connect 0 1 1 0;
 #X connect 1 0 2 0;
@@ -1412,7 +1410,6 @@
 #X obj 20 10 inlet test;
 #X obj 20 222 outlet;
 #X obj 163 53 t b a;
-#X obj 120 240 print;
 #X connect 0 0 6 0;
 #X connect 0 1 1 0;
 #X connect 1 0 2 0;
@@ -1428,7 +1425,7 @@
 #X connect 10 1 3 1;
 #X restore 440 390 pd collide;
 #X floatatom 450 110 5 0 0 0 - - -, f 5;
-#N canvas 688 376 361 313 collide 0;
+#N canvas 688 376 362 314 collide 0;
 #X obj 20 109 list-map2;
 #X obj 115 108 -;
 #X obj 115 133 abs;
@@ -1510,6 +1507,7 @@
 #X msg 380 320 1 -1;
 #X msg 460 320 3 -1;
 #X obj 170 130 receive red;
+#X obj 240 90 receive reset;
 #X connect 0 0 7 0;
 #X connect 0 0 5 0;
 #X connect 0 0 4 0;
@@ -1575,7 +1573,7 @@
 #X connect 48 0 5 1;
 #X connect 49 0 40 0;
 #X restore 150 300 pd Collision Logic;
-#N canvas 1074 32 452 332 game_start 1;
+#N canvas 1072 32 454 334 game_start 1;
 #X obj 30 10 inlet;
 #X obj 30 110 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
