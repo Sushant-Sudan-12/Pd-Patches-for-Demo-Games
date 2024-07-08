@@ -1,14 +1,12 @@
-#N canvas 976 368 454 305 10;
+#N canvas 1063 10 455 306 10;
 #X msg 10 10 create \, 1;
 #X msg 20 30 destroy;
 #X obj 10 60 gemwin;
 #X obj 10 100 gemhead;
 #X obj 10 170 translateXYZ;
-#X obj 10 220 colorRGB;
-#X obj 10 250 circle;
 #X obj 40 140 unpack 0 0;
 #X obj 70 100 receive atm;
-#N canvas 478 302 451 327 mover 0;
+#N canvas 477 301 453 329 mover 0;
 #X obj 60 140 line;
 #X obj 200 140 line;
 #X msg 70 100 \$1 3000;
@@ -37,19 +35,21 @@
 #X restore 120 240 pd mover;
 #X obj 120 170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 160 170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 170 170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X msg 120 190 -3 -3;
-#X msg 160 190 3 3;
+#X obj 10 200 colorRGB 1 1 0;
+#X obj 10 230 circle 0.4;
+#X msg 120 190 -4 5;
+#X msg 170 190 0 -2.5;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
-#X connect 4 0 5 0;
-#X connect 5 0 6 0;
-#X connect 7 0 4 1;
-#X connect 7 1 4 2;
-#X connect 8 0 7 0;
-#X connect 10 0 12 0;
-#X connect 11 0 13 0;
-#X connect 12 0 9 0;
-#X connect 13 0 9 1;
+#X connect 4 0 10 0;
+#X connect 5 0 4 1;
+#X connect 5 1 4 2;
+#X connect 6 0 5 0;
+#X connect 8 0 12 0;
+#X connect 9 0 13 0;
+#X connect 10 0 11 0;
+#X connect 12 0 7 0;
+#X connect 13 0 7 1;
