@@ -1,4 +1,4 @@
-#N canvas 976 369 453 303 10;
+#N canvas 976 368 454 305 10;
 #X msg 10 10 create \, 1;
 #X msg 20 30 destroy;
 #X obj 10 60 gemwin;
@@ -8,7 +8,7 @@
 #X obj 10 250 circle;
 #X obj 40 140 unpack 0 0;
 #X obj 70 100 receive atm;
-#N canvas 880 336 450 326 mover 1;
+#N canvas 478 302 451 327 mover 0;
 #X obj 60 140 line;
 #X obj 200 140 line;
 #X msg 70 100 \$1 3000;
@@ -16,31 +16,31 @@
 #X obj 110 190 pack 0 0;
 #X floatatom 40 180 5 0 0 0 - - -, f 5;
 #X floatatom 210 180 5 0 0 0 - - -, f 5;
-#X obj 50 10 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 180 10 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
 #X obj 50 60 unpack 0 0, f 13;
-#X msg 50 30 -3 -3;
-#X msg 180 30 3 3;
 #X obj 180 60 unpack 0 0, f 11;
 #X obj 110 215 send atm;
+#X obj 50 20 inlet from;
+#X obj 180 20 inlet to;
 #X connect 0 0 4 0;
 #X connect 0 0 5 0;
 #X connect 1 0 4 1;
 #X connect 1 0 6 0;
 #X connect 2 0 0 0;
 #X connect 3 0 1 0;
-#X connect 4 0 13 0;
-#X connect 7 0 10 0;
-#X connect 8 0 11 0;
-#X connect 9 0 0 0;
-#X connect 9 1 1 0;
-#X connect 10 0 9 0;
-#X connect 11 0 12 0;
-#X connect 12 0 2 0;
-#X connect 12 1 3 0;
-#X restore 340 10 pd mover;
+#X connect 4 0 9 0;
+#X connect 7 0 0 0;
+#X connect 7 1 1 0;
+#X connect 8 0 2 0;
+#X connect 8 1 3 0;
+#X connect 10 0 7 0;
+#X connect 11 0 8 0;
+#X restore 120 240 pd mover;
+#X obj 120 170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 160 170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 120 190 -3 -3;
+#X msg 160 190 3 3;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
@@ -49,3 +49,7 @@
 #X connect 7 0 4 1;
 #X connect 7 1 4 2;
 #X connect 8 0 7 0;
+#X connect 10 0 12 0;
+#X connect 11 0 13 0;
+#X connect 12 0 9 0;
+#X connect 13 0 9 1;
