@@ -1,4 +1,4 @@
-#N canvas 800 459 410 314 10;
+#N canvas 964 384 414 318 10;
 #X obj 10 80 gemwin;
 #X msg 30 50 destroy;
 #N canvas 484 188 1038 458 background 0;
@@ -172,7 +172,7 @@
 #X connect 34 0 3 0;
 #X restore 10 110 pd score;
 #X msg 10 20 dimen 750 750 \, create \, 1;
-#N canvas 792 16 734 334 Spawner 1;
+#N canvas 792 16 734 334 Spawner 0;
 #N canvas 1032 308 494 358 gemmouse 0;
 #X obj 100 60 gemmouse 8 8;
 #X obj 144 98 swap 8;
@@ -190,7 +190,7 @@
 #X obj 320 70 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 350 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 240 40 spigot;
 #X obj 340 40 spigot;
 #X obj 430 60 loadbang;
@@ -366,7 +366,7 @@
 #X restore 500 10 pd gemmouse;
 #X floatatom 590 60 5 0 0 1 - - -, f 5;
 #X obj 590 20 loadbang;
-#N canvas 748 69 534 437 comet_collision2 0;
+#N canvas 748 68 534 438 comet_collision2 0;
 #X obj 300 60 inlet radius;
 #X obj 200 60 inlet reference;
 #X obj 160 110 gemhead;
@@ -427,6 +427,7 @@
 #X obj 380 260 delay 10;
 #X obj 360 290 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
+#X obj 30 270 send destroyed;
 #X connect 0 0 7 2;
 #X connect 1 0 4 0;
 #X connect 1 0 7 1;
@@ -437,6 +438,7 @@
 #X connect 4 1 16 0;
 #X connect 5 1 11 0;
 #X connect 5 1 15 0;
+#X connect 5 1 24 0;
 #X connect 6 0 7 0;
 #X connect 7 0 5 0;
 #X connect 7 0 8 0;
@@ -454,7 +456,7 @@
 #X connect 22 0 23 0;
 #X connect 23 0 20 0;
 #X restore 200 90 pd comet_collision2;
-#N canvas 152 10 539 382 comet_collision1 0;
+#N canvas 152 9 540 384 comet_collision1 0;
 #X obj 300 60 inlet radius;
 #X obj 200 60 inlet reference;
 #X obj 160 110 gemhead;
@@ -522,6 +524,7 @@
 #X obj 360 290 delay 10;
 #X obj 340 320 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
+#X obj 30 270 send destroyed;
 #X connect 0 0 7 2;
 #X connect 1 0 4 0;
 #X connect 1 0 7 1;
@@ -532,6 +535,7 @@
 #X connect 4 1 16 0;
 #X connect 5 1 11 0;
 #X connect 5 1 15 0;
+#X connect 5 1 30 0;
 #X connect 6 0 7 0;
 #X connect 7 0 5 0;
 #X connect 7 0 8 0;
@@ -616,6 +620,7 @@
 #X obj 400 240 delay 10;
 #X obj 380 270 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
+#X obj 30 270 send destroyed;
 #X connect 0 0 7 2;
 #X connect 1 0 4 0;
 #X connect 1 0 7 1;
@@ -626,6 +631,7 @@
 #X connect 4 1 16 0;
 #X connect 5 1 11 0;
 #X connect 5 1 15 0;
+#X connect 5 1 24 0;
 #X connect 6 0 7 0;
 #X connect 7 0 5 0;
 #X connect 7 0 8 0;
@@ -704,6 +710,7 @@
 #X obj 410 240 delay 10;
 #X obj 390 270 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
+#X obj 30 270 send destroyed;
 #X connect 0 0 7 2;
 #X connect 1 0 4 0;
 #X connect 1 0 7 1;
@@ -714,6 +721,7 @@
 #X connect 4 1 16 0;
 #X connect 5 1 11 0;
 #X connect 5 1 15 0;
+#X connect 5 1 24 0;
 #X connect 6 0 7 0;
 #X connect 7 0 5 0;
 #X connect 7 0 8 0;
@@ -731,7 +739,7 @@
 #X connect 22 0 23 0;
 #X connect 23 0 20 0;
 #X restore 500 90 pd comet_collision4;
-#N canvas 1026 64 511 418 Comet1 1;
+#N canvas 1024 64 513 418 Comet1 0;
 #X obj 190 320 outlet;
 #N canvas 833 176 359 271 mover 0;
 #X obj 60 140 line;
@@ -1156,6 +1164,7 @@
 #X obj 420 270 delay 10;
 #X obj 400 300 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
+#X obj 30 270 send destroyed;
 #X connect 0 0 3 0;
 #X connect 0 0 6 1;
 #X connect 1 0 2 0;
@@ -1165,6 +1174,7 @@
 #X connect 3 1 21 0;
 #X connect 4 1 10 0;
 #X connect 4 1 13 0;
+#X connect 4 1 29 0;
 #X connect 5 0 6 0;
 #X connect 6 0 4 0;
 #X connect 6 0 7 0;
@@ -1291,7 +1301,7 @@
 #X connect 24 0 25 0;
 #X connect 26 0 25 1;
 #X restore 10 160 pd Spawner;
-#N canvas 1077 18 460 500 Game_overScreen 0;
+#N canvas 1072 210 461 501 Game_overScreen 0;
 #X msg 30 120 set 57;
 #X obj 30 145 gemhead;
 #X obj 30 175 colorRGB 1 0 0;
@@ -1328,7 +1338,7 @@
 #X connect 13 0 4 0;
 #X connect 14 0 13 0;
 #X restore 10 220 pd Game_overScreen;
-#N canvas 961 82 451 326 Game_startScreen 1;
+#N canvas 1080 304 457 354 Game_startScreen 1;
 #X obj 50 140 send reset;
 #X obj 50 80 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
@@ -1346,5 +1356,49 @@
 #X connect 5 0 0 0;
 #X connect 6 0 1 0;
 #X restore 10 200 pd Game_startScreen;
+#N canvas 852 16 588 344 Music_COntroller 0;
+#X obj 60 180 readsf~;
+#X obj 60 215 *~ 0.5;
+#X obj 60 250 dac~;
+#X msg 60 150 open Sound/Ambience.wav \, 1;
+#X obj 150 75 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 280 110 stop;
+#X obj 150 30 receive reset;
+#X obj 240 30 receive start;
+#X msg 180 110 stop;
+#X obj 240 80 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 240 180 readsf~;
+#X obj 240 215 *~ 0.5;
+#X obj 240 250 dac~;
+#X msg 240 150 open Sound/GameLoop.wav \, 1;
+#X obj 410 180 readsf~;
+#X obj 410 215 *~ 0.5;
+#X obj 410 250 dac~;
+#X msg 410 150 open Sound/Destroy.wav \, 1;
+#X obj 410 120 receive destroyed;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
+#X connect 6 0 4 0;
+#X connect 6 0 8 0;
+#X connect 7 0 5 0;
+#X connect 7 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 13 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 13 0 10 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 15 0 16 1;
+#X connect 17 0 14 0;
+#X connect 18 0 17 0;
+#X restore 10 260 pd Music_COntroller;
 #X connect 1 0 0 0;
 #X connect 4 0 0 0;
