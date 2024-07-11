@@ -1,4 +1,4 @@
-#N canvas 175 237 469 349 10;
+#N canvas 993 375 471 350 10;
 #X obj 20 60 gemwin;
 #X msg 40 40 destroy;
 #X msg 20 20 dimen 600 600 \, create \, 1;
@@ -1630,7 +1630,7 @@
 #X obj 290 10 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 290 40 send reset;
-#N canvas 567 68 457 562 spawner 1;
+#N canvas 566 68 459 562 spawner 0;
 #X obj 186 336 pack 0 0;
 #X floatatom 106 336 7 0 0 0 - - -, f 7;
 #X floatatom 296 336 6 0 0 0 - - -, f 6;

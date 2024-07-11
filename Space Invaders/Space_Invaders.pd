@@ -1,4 +1,4 @@
-#N canvas 908 432 418 298 10;
+#N canvas 1030 391 420 339 10;
 #X obj 10 80 gemwin;
 #X msg 30 50 destroy;
 #N canvas 484 188 1038 458 background 0;
@@ -174,7 +174,7 @@
 #X connect 35 0 31 0;
 #X restore 10 110 pd score;
 #X msg 10 20 dimen 750 750 \, create \, 1;
-#N canvas 794 34 743 424 Spawner 0;
+#N canvas 794 34 743 424 Spawner 1;
 #N canvas 1032 308 494 358 gemmouse 0;
 #X obj 100 60 gemmouse 8 8;
 #X obj 144 98 swap 8;
@@ -376,7 +376,7 @@
 #X obj 230 100 unpack 0 0;
 #X obj 30 170 select 0 1;
 #X obj 120 60 inlet test;
-#N canvas 781 144 539 450 collide 0;
+#N canvas 780 144 541 450 collide 0;
 #X obj 97 137 list-map2;
 #X obj 177 138 -;
 #X obj 177 185 *;
@@ -391,7 +391,9 @@
 #X obj 100 320 outlet;
 #X obj 126 100 t b a;
 #X obj 100 290 <= 1;
+#X obj 97 162 print;
 #X connect 0 0 5 0;
+#X connect 0 0 14 0;
 #X connect 0 1 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 0 2;
@@ -477,7 +479,7 @@
 #X connect 31 0 27 0;
 #X connect 32 0 31 0;
 #X restore 200 90 pd comet_collision2;
-#N canvas 839 144 551 445 comet_collision1 0;
+#N canvas 725 176 553 472 comet_collision1 1;
 #X obj 300 60 inlet radius;
 #X obj 200 60 inlet reference;
 #X obj 160 110 gemhead;
@@ -485,13 +487,13 @@
 #X obj 230 100 unpack 0 0;
 #X obj 30 170 select 0 1;
 #X obj 120 60 inlet test;
-#N canvas 994 232 543 454 collide 0;
+#N canvas 910 221 532 457 collide 0;
 #X obj 97 137 list-map2;
 #X obj 177 138 -;
 #X obj 177 185 *;
 #X obj 177 161 t a a;
-#X obj 100 260 sqrt;
-#X obj 97 212 list-reduce;
+#X obj 90 260 sqrt;
+#X obj 90 210 list-reduce;
 #X obj 181 212 +;
 #X obj 130 280 t b a;
 #X obj 126 76 inlet reference;
@@ -500,7 +502,9 @@
 #X obj 100 330 outlet;
 #X obj 126 100 t b a;
 #X obj 100 300 <= 1;
+#X obj 50 160 print;
 #X connect 0 0 5 0;
+#X connect 0 0 14 0;
 #X connect 0 1 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 0 2;
@@ -605,8 +609,8 @@
 #X obj 230 100 unpack 0 0;
 #X obj 30 170 select 0 1;
 #X obj 120 60 inlet test;
-#N canvas 708 160 538 450 collide 0;
-#X obj 97 137 list-map2;
+#N canvas 708 160 538 450 collide 1;
+#X obj 100 140 list-map2;
 #X obj 177 138 -;
 #X obj 177 185 *;
 #X obj 177 161 t a a;
@@ -620,6 +624,7 @@
 #X obj 100 320 outlet;
 #X obj 126 100 t b a;
 #X obj 100 290 <= 1;
+#X obj 97 237;
 #X connect 0 0 5 0;
 #X connect 0 1 1 0;
 #X connect 1 0 3 0;
@@ -628,6 +633,7 @@
 #X connect 3 1 2 1;
 #X connect 4 0 13 0;
 #X connect 5 0 4 0;
+#X connect 5 0 14 0;
 #X connect 5 1 6 0;
 #X connect 6 0 5 1;
 #X connect 7 0 13 0;
@@ -1439,9 +1445,9 @@
 #X msg 240 390 20;
 #X msg 530 390 20;
 #X obj 480 290 hsl 87 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 3700 1;
+#000000 #000000 0 1;
 #X obj 480 310 hsl 88 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 3900 1;
+#000000 #000000 0 1;
 #X msg 460 240 set \$1;
 #X msg 530 240 set \$1;
 #X msg 460 260 -0.837209;
@@ -1457,9 +1463,9 @@
 #X obj 750 370 loadbang;
 #X msg 750 390 20;
 #X obj 700 290 hsl 87 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 5600 1;
+#000000 #000000 0 1;
 #X obj 700 310 hsl 88 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 3900 1;
+#000000 #000000 0 1;
 #X msg 680 240 set \$1;
 #X msg 750 240 set \$1;
 #X msg 680 260 1.81395;
