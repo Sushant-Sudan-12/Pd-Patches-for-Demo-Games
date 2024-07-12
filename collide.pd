@@ -1,4 +1,4 @@
-#N canvas 489 302 630 372 10;
+#N canvas 488 301 632 398 10;
 #X text 54 24 Collision Detection (CD);
 #X floatatom 178 160 5 0 0 0 X - -, f 5;
 #X floatatom 201 257 5 0 0 1 Radius - -, f 5;
@@ -59,7 +59,7 @@ radius R.;
 #X obj 86 206 unpack 0 0;
 #X obj 234 64 inlet test;
 #X obj 60 373 circle 0.2;
-#N canvas 708 160 538 450 collide 1;
+#N canvas 708 160 538 450 collide 0;
 #X obj 97 137 list-map2;
 #X obj 177 138 -;
 #X obj 177 185 *;
@@ -217,7 +217,7 @@ the distance in all directions \, and compare it with a radius:;
 #X connect 34 0 21 0;
 #X restore 99 593 pd Circle_Collision;
 #X text 99 448 copy/paste version:;
-#N canvas 713 272 285 304 grid-collision 0;
+#N canvas 712 272 286 305 grid-collision 0;
 #X obj 34 131 list-map2;
 #X obj 129 130 -;
 #X obj 129 155 abs;
@@ -246,7 +246,7 @@ the distance in all directions \, and compare it with a radius:;
 #X text 98 488 test;
 #X text 134 475 reference;
 #X text 109 533 0/1;
-#N canvas 36 6 586 782 Grid_Collision 0;
+#N canvas 36 5 586 784 Grid_Collision 0;
 #X text 39 50 a) Grid Collisions (Collision with a rectangle);
 #X text 60 75 Here we put a rectangle or square around or test point.
 This is easy to implement: Just check for collisions in x-direction
