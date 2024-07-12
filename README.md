@@ -5,3 +5,4 @@ For now its work in progress on the main repository page outside of any folder a
 In the folder I have created the dmeo games I am working on it includes the Art folder the sound folder(containing WAV files) and off course the PD patch.
 
 Feel free to reach out if you have some amaing idea of how things can be improved or anything that can be optimied.
+gmail:sushantsudan3075@gmail.com
