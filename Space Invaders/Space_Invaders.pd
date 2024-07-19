@@ -1,4 +1,4 @@
-#N canvas 836 339 464 381 10;
+#N canvas 1004 380 465 383 10;
 #X obj 10 80 gemwin;
 #X msg 30 50 destroy;
 #N canvas 484 188 1038 458 background 0;
@@ -174,7 +174,7 @@
 #X connect 35 0 31 0;
 #X restore 10 110 pd score;
 #X msg 10 20 dimen 750 750 \, create \, 1;
-#N canvas 765 4 750 430 Spawner 0;
+#N canvas 765 4 750 430 Spawner 1;
 #N canvas 1032 308 494 358 gemmouse 0;
 #X obj 100 60 gemmouse 8 8;
 #X obj 144 98 swap 8;
