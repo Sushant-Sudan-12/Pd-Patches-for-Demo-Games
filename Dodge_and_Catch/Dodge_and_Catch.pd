@@ -1,4 +1,4 @@
-#N canvas 928 120 478 310 10;
+#N canvas 1034 131 479 311 10;
 #X obj 10 60 gemwin;
 #X msg 10 10 create \, 1;
 #X msg 20 30 destroy;
@@ -98,11 +98,11 @@
 #000000;
 #N canvas 800 284 714 486 Collisions 0;
 #X restore 10 110 pd Collisions;
-#N canvas 296 192 454 306 PlayerArea 0;
+#N canvas 771 268 455 331 PlayerArea 1;
 #X floatatom 160 40 5 0 0 1 Radius - -, f 5;
 #X obj 160 -10 loadbang;
 #X msg 160 15 2;
-#N canvas 488 236 482 482 Player 0;
+#N canvas 1000 232 483 508 Player 1;
 #X obj 210 440 outlet;
 #X obj 90 400 translateXYZ;
 #X obj 100 290 gemhead;
@@ -287,6 +287,7 @@
 #X connect 3 0 5 0;
 #X connect 4 0 5 1;
 #X restore 10 140 pd PlayerArea;
+#X obj 20 200 gemkeyname;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 6 0 4 0;
