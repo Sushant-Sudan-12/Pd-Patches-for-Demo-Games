@@ -1,4 +1,4 @@
-#N canvas 1028 376 433 386 10;
+#N canvas 1028 376 434 386 10;
 #X obj 10 110 gemwin;
 #X msg 30 80 destroy;
 #N canvas 484 188 1038 458 background 0;
@@ -182,7 +182,7 @@
 #X connect 39 0 32 0;
 #X restore 10 140 pd score;
 #X msg 10 50 dimen 750 750 \, create \, 1;
-#N canvas 708 8 758 480 Spawner 1;
+#N canvas 708 8 758 481 Spawner 0;
 #N canvas 1032 308 494 358 gemmouse 0;
 #X obj 100 60 gemmouse 8 8;
 #X obj 144 98 swap 8;
@@ -424,7 +424,7 @@
 #X connect 31 0 27 0;
 #X connect 32 0 31 0;
 #X restore 217 201 pd comet_collision2;
-#N canvas 435 168 555 475 comet_collision1 1;
+#N canvas 434 168 556 476 comet_collision1 0;
 #X obj 300 60 inlet radius;
 #X obj 200 60 inlet reference;
 #X obj 160 110 gemhead;

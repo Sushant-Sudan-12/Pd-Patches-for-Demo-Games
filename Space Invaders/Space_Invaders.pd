@@ -1,4 +1,4 @@
-#N canvas 1036 448 390 246 10;
+#N canvas 1004 248 451 298 10;
 #N canvas 484 188 1038 458 background 0;
 #X obj 20 20 gemhead;
 #X obj 20 130 pix_image;
@@ -2609,9 +2609,9 @@
 #X connect 72 0 51 0;
 #X connect 77 0 78 0;
 #X restore 10 110 pd Game_startScreen;
-#X obj 180 120 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 180 150 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 180 160 send start;
+#X obj 180 190 send start;
 #N canvas 852 16 590 562 Music_Controller 0;
 #X obj 59 338 readsf~;
 #X obj 59 373 *~ 0.5;
@@ -2708,8 +2708,8 @@
 #X connect 37 0 5 0;
 #X connect 37 0 7 0;
 #X restore 10 130 pd Music_Controller;
-#X obj 250 160 send reset;
-#X obj 250 120 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 250 190 send reset;
+#X obj 250 150 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 564 100 962 549 Game_overScreen 0;
 #X msg 20 170 set 57;
@@ -2882,12 +2882,16 @@
 #X connect 4 0 1 0;
 #X connect 4 0 5 0;
 #X restore 10 10 pd gem;
-#X obj 180 30 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 180 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 250 30 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 250 40 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 180 70 send open;
-#X obj 250 70 send close;
+#X obj 180 80 send open;
+#X obj 250 80 send close;
+#X obj 318 138 cnv 15 104 104 empty empty empty 20 12 0 14 #fc0400
+#404040 0;
+#X obj 320 140 cnv 15 99 100 empty empty empty 20 12 0 14 #fcfcfc #404040
+0;
 #X connect 4 0 5 0;
 #X connect 8 0 7 0;
 #X connect 11 0 13 0;
