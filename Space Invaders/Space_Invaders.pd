@@ -1,4 +1,8 @@
-#N canvas 1004 248 451 298 10;
+#N canvas 940 461 452 299 10;
+#X obj 150 20 cnv 15 174 118 empty empty empty 20 12 0 14 #fc0400 #404040
+0;
+#X obj 160 30 cnv 15 156 99 empty empty empty 20 12 0 14 #fcfcfc #404040
+0;
 #N canvas 484 188 1038 458 background 0;
 #X obj 20 20 gemhead;
 #X obj 20 130 pix_image;
@@ -2609,9 +2613,6 @@
 #X connect 72 0 51 0;
 #X connect 77 0 78 0;
 #X restore 10 110 pd Game_startScreen;
-#X obj 180 150 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 180 190 send start;
 #N canvas 852 16 590 562 Music_Controller 0;
 #X obj 59 338 readsf~;
 #X obj 59 373 *~ 0.5;
@@ -2647,11 +2648,11 @@
 #X obj 320 10 receive start;
 #X obj 210 100 sel 1 0;
 #X obj 330 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 360 170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 390 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 280 140 spigot;
 #X obj 380 140 spigot;
 #X obj 450 160 loadbang;
@@ -2659,6 +2660,8 @@
 #X obj 400 110 receive open;
 #X obj 180 160 spigot;
 #X obj 230 180 spigot;
+#X obj 310 340 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 2 1;
@@ -2668,6 +2671,7 @@
 #X connect 6 0 8 0;
 #X connect 7 0 11 0;
 #X connect 8 0 9 0;
+#X connect 8 1 38 0;
 #X connect 9 0 10 0;
 #X connect 9 0 10 1;
 #X connect 11 0 8 0;
@@ -2707,10 +2711,8 @@
 #X connect 36 0 4 0;
 #X connect 37 0 5 0;
 #X connect 37 0 7 0;
+#X connect 38 0 37 0;
 #X restore 10 130 pd Music_Controller;
-#X obj 250 190 send reset;
-#X obj 250 150 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
 #N canvas 564 100 962 549 Game_overScreen 0;
 #X msg 20 170 set 57;
 #X obj 20 195 gemhead;
@@ -2882,17 +2884,23 @@
 #X connect 4 0 1 0;
 #X connect 4 0 5 0;
 #X restore 10 10 pd gem;
-#X obj 180 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 250 40 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 180 80 send open;
-#X obj 250 80 send close;
-#X obj 318 138 cnv 15 104 104 empty empty empty 20 12 0 14 #fc0400
+#X obj 150 150 cnv 15 174 118 empty empty empty 20 12 0 14 #fc0400
 #404040 0;
-#X obj 320 140 cnv 15 99 100 empty empty empty 20 12 0 14 #fcfcfc #404040
+#X obj 160 160 cnv 15 156 99 empty empty empty 20 12 0 14 #fcfcfc #404040
 0;
-#X connect 4 0 5 0;
-#X connect 8 0 7 0;
-#X connect 11 0 13 0;
-#X connect 12 0 14 0;
+#X obj 170 220 send start;
+#X obj 240 220 send reset;
+#X obj 170 180 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 240 180 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 170 80 send open;
+#X obj 170 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 240 40 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 240 80 send close;
+#X connect 13 0 11 0;
+#X connect 14 0 12 0;
+#X connect 16 0 15 0;
+#X connect 17 0 18 0;
