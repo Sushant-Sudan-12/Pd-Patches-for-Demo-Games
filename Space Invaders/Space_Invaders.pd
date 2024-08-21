@@ -1,7 +1,7 @@
-#N canvas 940 461 452 299 10;
-#X obj 150 20 cnv 15 174 118 empty empty empty 20 12 0 14 #fc0400 #404040
+#N canvas 745 217 704 460 10;
+#X obj 480 20 cnv 15 174 118 empty empty empty 20 12 0 14 #fc0400 #404040
 0;
-#X obj 160 30 cnv 15 156 99 empty empty empty 20 12 0 14 #fcfcfc #404040
+#X obj 490 30 cnv 15 156 99 empty empty empty 20 12 0 14 #fcfcfc #404040
 0;
 #N canvas 484 188 1038 458 background 0;
 #X obj 20 20 gemhead;
@@ -88,7 +88,7 @@
 #X connect 42 0 19 0;
 #X connect 42 0 27 0;
 #X connect 42 0 36 0;
-#X restore 10 70 pd background;
+#X restore 32 357 pd background;
 #N canvas 608 56 474 434 score 0;
 #X obj 160 40 gemhead;
 #X obj 260 240 f;
@@ -174,7 +174,7 @@
 #X connect 33 0 25 0;
 #X connect 34 0 0 0;
 #X connect 35 0 31 0;
-#X restore 10 30 pd score;
+#X restore 32 317 pd score;
 #N canvas 760 88 762 438 Spawner 0;
 #X floatatom 130 60 5 0 0 1 - - -, f 5;
 #X obj 130 20 loadbang;
@@ -2422,7 +2422,7 @@
 #X connect 39 0 12 0;
 #X connect 40 0 28 0;
 #X connect 41 0 29 0;
-#X restore 10 50 pd Spawner;
+#X restore 32 337 pd Spawner;
 #N canvas 444 72 1038 518 Game_startScreen 0;
 #X obj 370 10 loadbang;
 #X obj 270 10 send reset;
@@ -2612,7 +2612,7 @@
 #X connect 72 0 38 0;
 #X connect 72 0 51 0;
 #X connect 77 0 78 0;
-#X restore 10 110 pd Game_startScreen;
+#X restore 32 397 pd Game_startScreen;
 #N canvas 852 16 590 562 Music_Controller 0;
 #X obj 59 338 readsf~;
 #X obj 59 373 *~ 0.5;
@@ -2648,11 +2648,11 @@
 #X obj 320 10 receive start;
 #X obj 210 100 sel 1 0;
 #X obj 330 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 360 170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 390 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 280 140 spigot;
 #X obj 380 140 spigot;
 #X obj 450 160 loadbang;
@@ -2712,8 +2712,8 @@
 #X connect 37 0 5 0;
 #X connect 37 0 7 0;
 #X connect 38 0 37 0;
-#X restore 10 130 pd Music_Controller;
-#N canvas 564 100 962 549 Game_overScreen 0;
+#X restore 32 417 pd Music_Controller;
+#N canvas 564 100 962 550 Game_overScreen 0;
 #X msg 20 170 set 57;
 #X obj 20 195 gemhead;
 #X obj 20 225 colorRGB 1 0 0;
@@ -2732,9 +2732,9 @@
 #X msg 220 220 0.976744;
 #X msg 290 220 -0.62069;
 #X obj 200 300 translateXYZ 0 0 0;
-#X obj 310 160 loadbang, f 9;
-#X msg 430 180 set 57;
-#X obj 430 205 gemhead;
+#X obj 350 200 loadbang, f 9;
+#X msg 430 140 set 57;
+#X obj 430 165 gemhead;
 #X obj 430 420 colorRGB 1 0 0;
 #X obj 480 290 hsl 87 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 3700 1;
@@ -2748,8 +2748,8 @@
 #X obj 320 330 receive score-no;
 #X obj 420 455 text2d You protected the city from;
 #X obj 200 340 colorRGB 1 1 1;
-#X msg 650 180 set 57;
-#X obj 650 205 gemhead;
+#X msg 650 130 set 57;
+#X obj 650 155 gemhead;
 #X obj 650 420 colorRGB 1 0 0;
 #X obj 700 290 hsl 87 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 5600 1;
@@ -2763,8 +2763,8 @@
 #X obj 640 460 text2d asteroids;
 #X obj 200 440 text2d 0;
 #X msg 200 140 set 57;
-#X obj 500 170 loadbang, f 9;
-#X obj 720 180 loadbang, f 9;
+#X obj 510 200 loadbang, f 9;
+#X obj 720 200 loadbang, f 9;
 #X obj 410 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 440 70 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -2870,7 +2870,7 @@
 #X connect 62 0 60 0;
 #X connect 63 0 58 0;
 #X connect 64 0 56 0;
-#X restore 10 90 pd Game_overScreen;
+#X restore 32 377 pd Game_overScreen;
 #N canvas 536 226 450 301 gem 0;
 #X obj 30 150 gemwin;
 #X msg 70 120 destroy;
@@ -2883,23 +2883,46 @@
 #X connect 3 0 2 0;
 #X connect 4 0 1 0;
 #X connect 4 0 5 0;
-#X restore 10 10 pd gem;
-#X obj 150 150 cnv 15 174 118 empty empty empty 20 12 0 14 #fc0400
+#X restore 32 297 pd gem;
+#X obj 480 210 cnv 15 174 118 empty empty empty 20 12 0 14 #fc0400
 #404040 0;
-#X obj 160 160 cnv 15 156 99 empty empty empty 20 12 0 14 #fcfcfc #404040
+#X obj 490 220 cnv 15 156 99 empty empty empty 20 12 0 14 #fcfcfc #404040
 0;
-#X obj 170 220 send start;
-#X obj 240 220 send reset;
-#X obj 170 180 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 500 280 send start;
+#X obj 570 280 send reset;
+#X obj 500 240 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 240 180 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 570 240 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 170 80 send open;
-#X obj 170 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 500 80 send open;
+#X obj 500 40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 240 40 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 570 40 bng 14 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 240 80 send close;
+#X obj 570 80 send close;
+#X obj 10 150 cnv 15 430 49 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X obj 10 100 cnv 15 430 40 empty empty empty 20 12 0 14 #bcbcbc #404040
+0;
+#X obj 12 -13 cnv 15 430 98 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X text 130 -40 SPACE INVADERS;
+#X text 20 160 CONTROLS;
+#X text 18 103 OBJECTIVE;
+#X text 20 10 The night has fallen and the citizens wild asleep;
+#X text 20 -10 DESCRIPTION;
+#X text 20 120 Destory as many as comets as possible.;
+#X text 70 180 Mouse Click;
+#X obj 10 220 cnv 15 430 54 empty empty empty 20 12 0 14 #bcbcbc #404040
+0;
+#X text 20 230 NOTE;
+#X text 50 250 Don't forget to enjoy!;
+#X text 510 0 Controlling GEM;
+#X text 510 190 Controlling GAME;
+#X text 20 30 But how long before them and their sweet dreams turn
+into a living nightmare;
+#X text 20 60 Only you can answer that!;
+#X text 490 150 Don't go FullScreen mode;
 #X connect 13 0 11 0;
 #X connect 14 0 12 0;
 #X connect 16 0 15 0;
