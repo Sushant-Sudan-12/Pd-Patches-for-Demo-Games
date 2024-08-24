@@ -1,4 +1,4 @@
-#N canvas 796 164 710 542 10;
+#N canvas 95 156 715 546 10;
 #N canvas 48 72 1437 668 beat-sequencer 0;
 #X obj 329 -361 metro;
 #X obj 329 -336 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -1435,7 +1435,7 @@
 #X connect 246 0 243 1;
 #X connect 247 0 238 0;
 #X connect 247 0 238 1;
-#X restore 40 470 pd beat-sequencer;
+#X restore 40 500 pd beat-sequencer;
 #N canvas 772 76 466 382 score 0;
 #X obj 160 40 gemhead;
 #X obj 260 240 f;
@@ -1478,6 +1478,7 @@
 #X msg 400 100 0;
 #X obj 320 190 send score-no;
 #X obj 320 20 receive start;
+#X obj 320 0 receive close;
 #X connect 0 0 13 0;
 #X connect 1 0 16 0;
 #X connect 2 0 32 0;
@@ -1521,7 +1522,8 @@
 #X connect 32 0 31 0;
 #X connect 33 0 3 0;
 #X connect 35 0 33 0;
-#X restore 40 430 pd score;
+#X connect 36 0 33 0;
+#X restore 40 460 pd score;
 #N canvas 572 12 922 738 Green_Tiles 0;
 #X obj 190 -90 hsl 87 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 4300 1;
@@ -1778,7 +1780,7 @@
 #X connect 103 0 26 1;
 #X connect 104 0 9 0;
 #X connect 104 0 17 1;
-#X restore 170 480 pd Green_Tiles;
+#X restore 170 510 pd Green_Tiles;
 #N canvas 481 0 559 754 WaterBlue_Tiles 0;
 #X obj 160 150 hsl 87 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 2007 1;
@@ -2646,7 +2648,7 @@
 #X connect 352 0 322 0;
 #X connect 353 0 332 0;
 #X connect 354 0 342 0;
-#X restore 170 460 pd WaterBlue_Tiles;
+#X restore 170 490 pd WaterBlue_Tiles;
 #N canvas 0 0 114 0 SandRed_Tiles 0;
 #X obj 162 72 hsl 87 15 -6 6 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 2007 1;
@@ -3509,19 +3511,26 @@
 #X connect 348 0 319 0;
 #X connect 349 0 329 0;
 #X connect 350 0 339 0;
-#X restore 170 440 pd SandRed_Tiles;
-#N canvas 821 176 453 306 gem 0;
+#X restore 170 470 pd SandRed_Tiles;
+#N canvas 820 176 454 306 gem 0;
 #X obj 30 150 gemwin;
 #X msg 70 120 destroy;
 #X msg 30 90 dimen 750 750 \, create \, 1;
 #X obj 30 60 receive open;
 #X obj 130 60 receive close;
+#X obj 251 142 key 1;
+#X obj 251 167 sel 101 113;
+#X obj 251 242 send start;
+#X obj 261 212 send reset;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 2 0;
 #X connect 4 0 1 0;
-#X restore 40 410 pd gem;
-#N canvas 868 160 314 210 GameLogic 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;
+#X restore 40 440 pd gem;
+#N canvas 868 160 314 210 GameLogic 0;
 #X floatatom 77 87 5 0 0 0 - - -, f 5;
 #X obj 97 17 loadbang;
 #N canvas 184 60 750 606 collision 0;
@@ -4457,7 +4466,7 @@
 #X connect 5 0 0 0;
 #X connect 7 0 2 0;
 #X connect 7 0 3 0;
-#X restore 40 450 pd GameLogic;
+#X restore 40 480 pd GameLogic;
 #N canvas 626 56 878 583 Game_overScreen 0;
 #X msg 30 160 set 57;
 #X obj 30 185 gemhead;
@@ -4615,7 +4624,7 @@
 #X connect 59 0 63 0;
 #X connect 60 0 62 0;
 #X connect 61 0 64 0;
-#X restore 40 490 pd Game_overScreen;
+#X restore 40 520 pd Game_overScreen;
 #X obj 500 230 cnv 15 174 118 empty empty empty 20 12 0 14 #fc0400
 #404040 0;
 #X obj 510 240 cnv 15 156 99 empty empty empty 20 12 0 14 #fcfcfc #404040
@@ -4638,7 +4647,7 @@
 #X obj 590 300 send reset;
 #X text 540 40 Controlling GEM;
 #X text 530 210 Controlling GAME;
-#X obj 20 210 cnv 15 430 61 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 20 210 cnv 15 430 78 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
 #X obj 20 160 cnv 15 430 40 empty empty empty 20 12 0 14 #bcbcbc #404040
 0;
@@ -4647,10 +4656,9 @@
 #X text 30 220 CONTROLS;
 #X text 28 163 OBJECTIVE;
 #X text 30 50 DESCRIPTION;
-#X obj 20 280 cnv 15 430 104 empty empty empty 20 12 0 14 #bcbcbc #404040
+#X obj 20 310 cnv 15 430 101 empty empty empty 20 12 0 14 #bcbcbc #404040
 0;
-#X text 30 290 NOTE;
-#X text 60 310 Reset the game everytime before starting;
+#X text 30 320 NOTE;
 #X text 140 20 Musical Land;
 #X text 30 70 Welcome to the land of music here beats control time
 and space, f 63;
@@ -4659,14 +4667,35 @@ beat ambience of this land we have got a world made of Sand and Water
 , f 65;
 #X text 80 240 WSAD - Movement, f 26;
 #X text 30 180 Collect as mmany points while staying on land;
-#X text 60 350 LISTEN TO THE DROP \, NOT THE BEAT DROP LITERALLY THE
+#X text 60 380 LISTEN TO THE DROP \, NOT THE BEAT DROP LITERALLY THE
 DROP;
-#X text 60 330 There is no boundary so if you go out of screen just
+#X text 60 360 There is no boundary so if you go out of screen just
 reset;
 #X text 30 120 On the noise of Splash the sand turns into water and
 vice versa, f 67;
 #X text 480 180 Do not go fullscreen in GEM Window;
+#X obj 532 381 cnv 15 119 104 empty empty empty 20 12 0 14 #fc0400
+#404040 0;
+#X obj 542 391 cnv 15 99 82 empty empty empty 20 12 0 14 #fcfcfc #404040
+0;
+#X obj 562 411 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#N canvas 536 225 450 303 Music 0;
+#X obj 100 50 inlet;
+#X obj 100 75 sel 0 1;
+#X msg 100 110 \; pd dsp 0;
+#X msg 160 110 \; pd dsp 1;
+#X obj 180 70 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 4 0 3 0;
+#X restore 562 441 pd Music;
+#X text 540 360 Controlling MUSIC;
+#X text 60 340 KEEP THE PATCH IN FOCUS FOR GAME TO TAKE INPUTS;
+#X text 80 260 E -Start Q- Reset, f 42;
 #X connect 12 0 15 0;
 #X connect 13 0 14 0;
 #X connect 16 0 17 0;
 #X connect 18 0 19 0;
+#X connect 41 0 42 0;

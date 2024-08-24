@@ -1,4 +1,4 @@
-#N canvas 745 217 704 460 10;
+#N canvas 800 142 707 521 10;
 #X obj 480 20 cnv 15 174 118 empty empty empty 20 12 0 14 #fc0400 #404040
 0;
 #X obj 490 30 cnv 15 156 99 empty empty empty 20 12 0 14 #fcfcfc #404040
@@ -2515,6 +2515,10 @@
 #X obj 630 320 colorRGB 0 1 0;
 #X obj 450 390 text2d The question being how many can you protect against??
 ;
+#X obj 840 50 key 1;
+#X obj 840 75 sel 101 113;
+#X obj 840 150 send start;
+#X obj 850 120 send reset;
 #X connect 0 0 1 0;
 #X connect 0 0 22 0;
 #X connect 0 0 23 0;
@@ -2612,6 +2616,9 @@
 #X connect 72 0 38 0;
 #X connect 72 0 51 0;
 #X connect 77 0 78 0;
+#X connect 79 0 80 0;
+#X connect 80 0 81 0;
+#X connect 80 1 82 0;
 #X restore 32 397 pd Game_startScreen;
 #N canvas 852 16 590 562 Music_Controller 0;
 #X obj 59 338 readsf~;
@@ -2648,11 +2655,11 @@
 #X obj 320 10 receive start;
 #X obj 210 100 sel 1 0;
 #X obj 330 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 360 170 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 390 170 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 280 140 spigot;
 #X obj 380 140 spigot;
 #X obj 450 160 loadbang;
@@ -2923,7 +2930,26 @@
 into a living nightmare;
 #X text 20 60 Only you can answer that!;
 #X text 490 150 Don't go FullScreen mode;
+#X obj 512 361 cnv 15 119 104 empty empty empty 20 12 0 14 #fc0400
+#404040 0;
+#X obj 522 371 cnv 15 99 82 empty empty empty 20 12 0 14 #fcfcfc #404040
+0;
+#X obj 542 391 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#N canvas 536 225 450 303 Music 0;
+#X obj 100 50 inlet;
+#X obj 100 75 sel 0 1;
+#X msg 100 110 \; pd dsp 0;
+#X msg 160 110 \; pd dsp 1;
+#X obj 180 80 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 4 0 3 0;
+#X restore 542 421 pd Music;
+#X text 520 340 Controlling MUSIC;
 #X connect 13 0 11 0;
 #X connect 14 0 12 0;
 #X connect 16 0 15 0;
 #X connect 17 0 18 0;
+#X connect 39 0 40 0;
