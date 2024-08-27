@@ -16,11 +16,11 @@ By leveraging Purr Data's capabilities for interactive audio and visual processi
 
 The following games have been developed as part of this project, each showcasing different aspects of musical gameplay:
 
-1. **Space Invaders**: Starry with a chance of comet, protect the city from the dangers of comet.
+1. **Comet Blast**: Starry with a chance of comet, protect the city from the dangers of comet.
 
 2. **Sky Force**: Protect against 3 levels of enemies in order with different intensities and move pattern.
 
-3. **Musical Tiles**: Listen to the Drop and protect yourself from the sudden danger of th floor under you changing.
+3. **Musical Land**: Listen to the Drop and protect yourself from the sudden danger of th floor under you changing.
 
 4. **Ice Puzzle**: A puzzle thorough an arena of ice solve it before the timer dies down.
 
