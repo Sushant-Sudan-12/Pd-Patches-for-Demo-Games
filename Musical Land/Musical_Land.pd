@@ -1,5 +1,5 @@
-#N canvas 94 156 716 546 10;
-#N canvas 48 72 1437 668 beat-sequencer 0;
+#N canvas 656 132 718 549 10;
+#N canvas 48 72 1438 670 beat-sequencer 0;
 #X obj 329 -361 metro;
 #X obj 329 -336 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -1093,7 +1093,7 @@
 #000000 0 1;
 #X msg 359 -436 500;
 #X obj 329 -237 % 16;
-#N canvas 739 60 439 312 Music 0;
+#N canvas 738 60 440 313 Music 0;
 #X obj 50 140 readsf~;
 #X obj 50 175 *~ 0.5;
 #X obj 50 210 dac~;
@@ -1105,6 +1105,7 @@
 #X obj 70 10 receive start;
 #X obj 180 10 receive reset;
 #X msg 180 35 stop;
+#X obj 280 10 receive close;
 #X connect 0 0 1 0;
 #X connect 0 1 7 0;
 #X connect 1 0 2 0;
@@ -1119,6 +1120,7 @@
 #X connect 9 0 10 0;
 #X connect 10 0 0 0;
 #X connect 10 0 4 0;
+#X connect 11 0 10 0;
 #X restore 1030 -430 pd Music;
 #X obj 180 -40 r new_pattern;
 #X obj 180 -15 random 100;
@@ -1199,6 +1201,7 @@
 #X msg 1260 -300 open Music/Point1.wav \, 1;
 #X obj 1260 -240 *~ 0.2;
 #X obj 1100 -235 *~ 0.3;
+#X obj 0 -440 receive close;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -1435,6 +1438,7 @@
 #X connect 246 0 243 1;
 #X connect 247 0 238 0;
 #X connect 247 0 238 1;
+#X connect 248 0 84 0;
 #X restore 40 500 pd beat-sequencer;
 #N canvas 772 76 466 382 score 0;
 #X obj 160 40 gemhead;
@@ -3512,23 +3516,23 @@
 #X connect 349 0 329 0;
 #X connect 350 0 339 0;
 #X restore 170 470 pd SandRed_Tiles;
-#N canvas 820 176 454 306 gem 0;
+#N canvas 820 176 454 307 gem 0;
 #X obj 30 150 gemwin;
 #X msg 70 120 destroy;
 #X msg 30 90 dimen 750 750 \, create \, 1;
 #X obj 30 60 receive open;
 #X obj 130 60 receive close;
 #X obj 251 142 key 1;
-#X obj 251 167 sel 101 113;
 #X obj 251 242 send start;
 #X obj 261 212 send reset;
+#X obj 251 167 sel 101 114;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 2 0;
 #X connect 4 0 1 0;
-#X connect 5 0 6 0;
-#X connect 6 0 7 0;
-#X connect 6 1 8 0;
+#X connect 5 0 8 0;
+#X connect 8 0 6 0;
+#X connect 8 1 7 0;
 #X restore 40 440 pd gem;
 #N canvas 868 160 314 210 GameLogic 0;
 #X floatatom 77 87 5 0 0 0 - - -, f 5;
@@ -4679,7 +4683,7 @@ vice versa, f 67;
 #X obj 542 391 cnv 15 99 82 empty empty empty 20 12 0 14 #fcfcfc #404040
 0;
 #X obj 560 420 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #N canvas 536 225 450 303 Music 0;
 #X obj 100 50 inlet;
 #X obj 100 75 sel 0 1;
@@ -4693,11 +4697,11 @@ vice versa, f 67;
 #X restore 560 440 pd Music;
 #X text 540 360 Controlling MUSIC;
 #X text 60 340 KEEP THE PATCH IN FOCUS FOR GAME TO TAKE INPUTS;
-#X text 80 260 E -Start Q- Reset, f 42;
 #X obj 560 400 loadbang;
+#X text 80 260 E -Start R - Reset, f 42;
 #X connect 12 0 15 0;
 #X connect 13 0 14 0;
 #X connect 16 0 17 0;
 #X connect 18 0 19 0;
 #X connect 41 0 42 0;
-#X connect 46 0 41 0;
+#X connect 45 0 41 0;
